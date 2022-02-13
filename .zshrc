@@ -91,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Sources aliases
+
 source $HOME/aliases
 
 # Sources shell startup applications

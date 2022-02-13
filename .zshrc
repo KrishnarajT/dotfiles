@@ -91,38 +91,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias zshrc="code ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias r="ranger"
-alias sr="sudo ranger"
-alias pr="cd /run/media/krishnaraj/Miscellaneous/Programs"
-alias st="cd /run/media/krishnaraj/Classes/University/First\ Year/Second\ Trimester"
-alias cf="cd ~/.config"
-alias tty='tty-clock -C6 -c -t'
-alias download='sudo pacman -S'
-alias commit='git add -A; git commit -m'
-alias weather='clear && curl wttr.in'
-alias shot='flameshot gui'
-alias shanti='killall -q'
-alias aur='yay -S'
-alias zzz='systemctl suspend'
-alias byefornow='shutdown now'
-alias wn='feh --bg-scale --randomize /run/media/krishnaraj/Photos/My\ Photos/Laptop/Wallpapers/Nature/*'  
-alias wm='feh --bg-scale --randomize ~/Pictures/Wallpapers/Minimalist/*' 
-alias wq='feh --bg-scale --randomize /run/media/krishnaraj/Photos/My\ Photos/Laptop/Wallpapers/QuoteFancy/*'  
-alias update-system='sudo pacman -Syyu'
-alias cd..='cd ..'
-alias ls='colorls -A --sd --git-status'
-alias lc='colorls -lA --sd --git-status'
-fortune
-pfetch
-alias dotfiles='usr/bin/git --git-dir=/home/krishnaraj/.dotfiles --work-tree=/home/krishnaraj'
-alias dotfiles='/usr/bin/git --git-dir=/home/krishnaraj/.dotfiles --work-tree=/home/krishnaraj'
+
+source aliases
+source shell-startup-programs

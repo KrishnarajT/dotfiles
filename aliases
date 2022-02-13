@@ -1,0 +1,50 @@
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+
+# Utility Aliases
+
+alias wn='feh --bg-scale --randomize /run/media/krishnaraj/Photos/My\ Photos/Laptop/Wallpapers/Nature/*'  
+alias wm='feh --bg-scale --randomize ~/Pictures/Wallpapers/Minimalist/*' 
+alias wq='feh --bg-scale --randomize /run/media/krishnaraj/Photos/My\ Photos/Laptop/Wallpapers/QuoteFancy/*'  
+alias shot='flameshot gui'
+alias weather='clear && curl wttr.in'
+alias tty='tty-clock -C6 -c -t'
+alias zshrc="code ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+
+# Shell Aliases
+
+alias cd..='cd ..'
+alias ls='colorls -A --sd --git-status'
+alias lc='colorls -lA --sd --git-status'
+
+# system Aliases
+
+alias download='sudo pacman -S'
+alias aur='yay -S'
+alias update-system='sudo pacman -Syyu'
+alias byefornow='shutdown now'
+alias zzz='systemctl suspend'
+alias shanti='killall -q'
+
+# Git Aliases
+
+alias dotfiles='/usr/bin/git --git-dir=/home/krishnaraj/.dotfiles --work-tree=/home/krishnaraj'
+alias push-dots='dotfiles push github-remote master'
+
+# File System Aliases
+
+alias r="ranger"
+alias sr="sudo ranger"
+alias pr="cd /run/media/krishnaraj/Miscellaneous/Programs"
+alias st="cd /run/media/krishnaraj/Classes/University/First\ Year/Second\ Trimester"
+alias cf="cd ~/.config"

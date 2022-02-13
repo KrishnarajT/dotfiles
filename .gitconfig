@@ -1,0 +1,17 @@
+[credential]
+	provider = generic
+	helper = 
+	helper = /usr/local/bin/git-credential-manager-core
+	credentialStore = secretservice
+[hub]
+	protocol = https~
+[user]
+	name = Krishnaraj Thadesar
+	email = krishnaraj.kpt@outlook.com
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

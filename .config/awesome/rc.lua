@@ -677,6 +677,7 @@ awesome.connect_signal(
 
 
 
+
 -- start polybar -  material theme
 -- awful.util.spawn_with_shell("~/.config/polybar/material/launch.sh")
 

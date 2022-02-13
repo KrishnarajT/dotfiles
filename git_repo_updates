@@ -1,0 +1,68 @@
+
+echo "Going home"
+echo
+cd $HOME
+
+tput setaf 5; echo "starting with dotfiles, here is the status"
+echo
+dot status
+
+tput setaf 3; echo "heres to commit"
+echo
+commit-dots
+
+tput setaf 3; echo "pushing to dotfiles"
+echo
+push-dots
+
+tput setaf 5; echo "going to customizations and backups"
+echo
+cd /run/media/krishnaraj/Miscellaneous/Customization\ and\ Backups/
+
+tput setaf 3; echo "Here is the status"
+echo
+git status
+
+tput setaf 3; echo "Commiting"
+echo
+git commit -am "daily commit"
+
+tput setaf 3; echo "pushing"
+echo
+git push
+
+
+tput setaf 5; echo "going to Creativity and Design"
+echo
+cd /run/media/krishnaraj/Miscellaneous/Creativity\ and\ Design/
+
+tput setaf 3; echo "Here is the status"
+echo
+git status
+
+tput setaf 3; echo "Commiting"
+echo
+git commit -am "daily commit"
+
+tput setaf 3; echo "pushing"
+echo
+git push
+
+tput setaf 5; echo "going to Second Trimester"
+echo
+cd /run/media/krishnaraj/Classes/University/First\ Year/Second\ Trimester/
+
+tput setaf 3; echo "Here is the status"
+echo
+git status
+
+tput setaf 3; echo "Commiting"
+echo
+git commit -am "daily commit"
+
+tput setaf 3; echo "pushing"
+echo
+git push
+
+cd $HOME
+

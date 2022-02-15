@@ -58,7 +58,7 @@ git status
 
 tput setaf 3; echo "staging untracked files if any"
 echo
-git add -a
+git add -A
 
 tput setaf 3; echo "Commiting"
 echo

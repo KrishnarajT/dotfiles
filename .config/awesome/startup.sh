@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 # Starting some basic utilities
-picom
-pulseaudio
+# picom
+# pulseaudio
 
-# Starting Bluetooth, and autoconnecting it to my usual bluetooth headset
-sudo systemctl enable bluetooth-autoconnect
-systemctl --user enable pulseaudio-bluetooth-autoconnect
-sudo systemctl enable acpid # required by it
-bluetooth-autoconnect # a downloaded utility to autoconnect trusted and paired devices, but may not work all the time
+# # Starting Bluetooth, and autoconnecting it to my usual bluetooth headset
+# sudo systemctl enable bluetooth-autoconnect
+# systemctl --user enable pulseaudio-bluetooth-autoconnect
+# sudo systemctl enable acpid # required by it
+# bluetooth-autoconnect # a downloaded utility to autoconnect trusted and paired devices, but may not work all the time
 
 # # doing it the usual system way, but another utility bluez and bluez-utils are required
 # sudo systemctl enable bluetooth.service

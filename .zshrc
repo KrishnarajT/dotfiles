@@ -95,3 +95,4 @@ source $HOME/aliases
 
 # Sources shell startup applications
 source $HOME/shell-startup-programs
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh

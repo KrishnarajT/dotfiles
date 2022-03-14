@@ -68,5 +68,24 @@ tput setaf 3; echo "pushing"
 echo
 git push
 
-cd $HOME
+tput setaf 5; echo "going to Tuitions"
+echo
+cd /run/media/krishnaraj/Classes/Tuitions/
 
+tput setaf 3; echo "Here is the status"
+echo
+git status
+
+tput setaf 3; echo "staging untracked files if any"
+echo
+git add -A
+
+tput setaf 3; echo "Commiting"
+echo
+git commit -am "daily commit"
+
+tput setaf 3; echo "pushing"
+echo
+git push
+
+cd $HOME

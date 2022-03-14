@@ -1,7 +1,6 @@
--- If LuaRocks is installed, make sure that packages installed through it are
--- found (e.g. lgi). If LuaRocks is not installed, do nothing.
-pcall(require, "luarocks.loader")
+-- IMPORTING 
 
+pcall(require, "luarocks.loader")
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -20,10 +19,8 @@ local volume_control = require("volume-control")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+-- ERROR HANDLING
 
--- {{{ Error handling
--- Check if awesome encountered an error during startup and fell back to
--- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
     naughty.notify({ preset = naughty.config.presets.critical,
                      title = "Oops, there were errors during startup!",
@@ -46,10 +43,13 @@ do
 end
 -- }}}
 
+-- THEMES
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("~/.config/awesome/themes/zenburn/theme.lua")
 -- beautiful.init("~/.config/awesome/awesome-copycats/themes/powerarrow-dark/theme.lua")
+beautiful.font = "Ubuntu 14"
 
 -- Icons for the volume control widget
 
@@ -71,25 +71,17 @@ local volume_widget = volume_control {
     end,
 }
 
+-- DEFAULTS
 
-
-
--- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
-
--- Default modkey.
--- Usually, Mod4 is the key with a logo between Control and Alt.
--- If you do not like this or do not have such a key,
--- I suggest you to remap Mod4 to another key using xmodmap or other tools.
--- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod1"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
-    -- awful.layout.suit.floating,
+    awful.layout.suit.floating,
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
@@ -107,8 +99,9 @@ awful.layout.layouts = {
 }
 -- }}}
 
--- {{{ Menu
--- Create a launcher widget and a main menu
+-- MENU
+
+-- {{{ 
 myawesomemenu = {
    { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
    { "manual", terminal .. " -e man awesome" },
@@ -132,12 +125,14 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
 
+-- WIBAR 
+
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 
 -- define your volume control, using default settings:
-volumecfg = volume_control {device="pulse"}
+volumecfg = volume_control{device="pulse"}
 
 -- Create the widget
 vol_control = volumecfg.widget
@@ -202,7 +197,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9"}, s, awful.layout.layouts[1])
+    awful.tag({ "🌏 Browser", "🖥️ Terminal", "#️⃣ Code", "📁 Files", "5️⃣ Misc. ", "6️⃣ Misc. ", "7️⃣ Misc. ", "💬 Messaging", "🎵 Music"}, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -229,7 +224,8 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({ position = "bottom", screen = s, fg = beautiful.fg_normal, height = 30 })
+        
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -314,17 +310,17 @@ globalkeys = gears.table.join(
             {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey,           }, "]", function () awful.spawn("brave-browser") end,
             {description = "open brave", group = "launcher"}),
-    awful.key({ modkey,           }, "'", function () awful.util.spawn_with_shell("feh --bg-fill --randomize ~/Pictures/Wallpapers/Minimalist/*") end,
+    awful.key({ modkey,           }, "'", function () awful.util.spawn_with_shell("feh --bg-scale --randomize ~/Pictures/Wallpapers/Nature/*") end,
             {description = "change the wallpaper", group = "launcher"}),
-    awful.key({ modkey,           }, "[", function () awful.spawn.spawn("pcmanfm") end,
+    awful.key({ modkey,           }, "[", function () awful.spawn.spawn("nautilus") end,
     {description = "open pcmanfm", group = "launcher"}),
     awful.key({ modkey,           }, ";", function () awful.spawn.spawn("spotify") end,
     {description = "open spotify", group = "launcher"}),
     awful.key({ modkey,           },"space" ,      
-    function () awful.spawn.with_shell("rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/launcher.rasi") end,
+    function () awful.spawn.with_shell("sh /home/krishnaraj/.config/rofi/bin/launcher_text") end,
     {description = "open Rofi", group = "launcher"}),
     awful.key({},"#148" ,      
-    function () awful.spawn.with_shell("rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/launcher.rasi") end,
+    function () awful.spawn.with_shell("sh /home/krishnaraj/.config/rofi/bin/launcher_text") end,
     {description = "open Rofi", group = "launcher"}), 
     awful.key({ }, "#180", function () awful.util.spawn("amixer set 'Master' 10%-") end,
     {description = "The Home Key on Bl Kb", group = "Controls"}),
@@ -656,21 +652,14 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
-beautiful.useless_gap = 7
+beautiful.useless_gap = 5
 -- awful.util.spawn_with_shell("sh ~/.config/awesome/startup.sh")
 
 
 -- closing other running scripts, before restarting awesome or a new startup.sh process
 -- is created each time awesome is restarted.
-awful.util.spawn_with_shell("killall sh")
 
-awful.util.spawn_with_shell("sh ~/.config/awesome/startup.sh")
-awesome.connect_signal(
-    'startup',
-    function(args)
-        awful.util.spawn_with_shell("sh ~/.config/awesome/startup.sh")
-    end
-)
+
 
 
 
@@ -685,10 +674,19 @@ awesome.connect_signal(
 
 -- client.connect_signal("manage", function (c)
 --     c.shape = function(cr, w, h)
---         gears.shape.rounded_rect(cr, w, h, 5)
+--         gears.shape.rounded_rect(cr, w, h, 10)
 --     end
 -- end)
 
 
 
 -- }}}
+
+awful.util.spawn_with_shell("killall sh")
+
+awesome.connect_signal(
+    'startup',
+    function(args)
+        awful.util.spawn_with_shell("sh ~/.config/awesome/startup.sh")
+    end
+)

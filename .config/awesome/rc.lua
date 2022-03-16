@@ -687,6 +687,6 @@ awful.util.spawn_with_shell("killall sh")
 awesome.connect_signal(
     'startup',
     function(args)
-        awful.util.spawn_with_shell("sh ~/.config/awesome/startup.sh")
+        awful.util.spawn_with_shell("sh ~/.config/awesome/startup.sh &")
     end
 )

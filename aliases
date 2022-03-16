@@ -41,7 +41,7 @@ alias shanti='killall -q'
 alias dot='/usr/bin/git --git-dir=/home/krishnaraj/.dotfiles --work-tree=/home/krishnaraj'
 alias push-dots='dot push github-remote master'
 alias commit-dots="dot commit -am 'random changes'"
-alias update-git='source $HOME/git_repo_updates'
+alias update-git-repos='source $HOME/git_repo_updates'
 
 # File System Aliases
 

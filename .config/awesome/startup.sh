@@ -5,6 +5,8 @@ source /home/krishnaraj/.config/awesome/monitor_setup.sh
 flameshot &
 picom --experimental-backends &
 pulseaudio &
+brave &
+alacritty &
 
 # Starting Bluetooth, and autoconnecting it to my usual bluetooth headset
 sudo systemctl enable bluetooth-autoconnect

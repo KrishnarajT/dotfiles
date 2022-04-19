@@ -72,33 +72,33 @@ font:
 
 # Here is ashes.dark but a little customized from terminal.sexy
 
-colors:
-  # Default colors
-  primary:
-    background: '0x222324'
-    foreground: '#D7A675'
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x222324'
+#     foreground: '#D7A675'
 
-  # Normal colors
-  normal:
-    black: '0x1c2023'
-    red: '0xc7ae95'
-    green: '0x95c7ae'
-    yellow: '0xaec795'
-    blue: '0xae95c7'
-    magenta: '0xc795ae'
-    cyan: '0x95aec7'
-    white: '0xc7ccd1'
+#   # Normal colors
+#   normal:
+#     black: '0x1c2023'
+#     red: '0xc7ae95'
+#     green: '0x95c7ae'
+#     yellow: '0xaec795'
+#     blue: '0xae95c7'
+#     magenta: '0xc795ae'
+#     cyan: '0x95aec7'
+#     white: '0xc7ccd1'
 
-  # Bright colors
-  bright:
-    black: '0x747c84'
-    red: '0xc7ae95'
-    green: '0x95c7ae'
-    yellow: '0xaec795'
-    blue: '0xae95c7'
-    magenta: '0xc795ae'
-    cyan: '0x95aec7'
-    white: '0xf3f4f5'
+#   # Bright colors
+#   bright:
+#     black: '0x747c84'
+#     red: '0xc7ae95'
+#     green: '0x95c7ae'
+#     yellow: '0xaec795'
+#     blue: '0xae95c7'
+#     magenta: '0xc795ae'
+#     cyan: '0x95aec7'
+#     white: '0xf3f4f5'
 
 # this is ocean dark also from terminal.sexy
 
@@ -129,6 +129,70 @@ colors:
 #     magenta: '0xb48ead'
 #     cyan:    '0x96b5b4'
 #     white:   '0xeff1f5'
+
+# Here is the paraiso scheme from terminal.sexy
+
+colors:
+  # Default colors
+  primary:
+    background: '0x2f1e2e'
+    foreground: '0xa39e9b'
+
+  # Normal colors
+  normal:
+    black:   '0x2f1e2e'
+    red:     '0xef6155'
+    green:   '0x48b685'
+    yellow:  '0xfec418'
+    blue:    '0x06b6ef'
+    magenta: '0x815ba4'
+    cyan:    '0x5bc4bf'
+    white:   '0xa39e9b'
+
+  # Bright colors
+  bright:
+    black:   '0x776e71'
+    red:     '0xef6155'
+    green:   '0x48b685'
+    yellow:  '0xfec418'
+    blue:    '0x06b6ef'
+    magenta: '0x815ba4'
+    cyan:    '0x5bc4bf'
+    white:   '0xe7e9db'
+
+# Here is solarized dark
+ 
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x002b36'
+#     foreground: '0x93a1a1'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x002b36'
+#     red:     '0xdc322f'
+#     green:   '0x859900'
+#     yellow:  '0xb58900'
+#     blue:    '0x268bd2'
+#     magenta: '0x6c71c4'
+#     cyan:    '0x2aa198'
+#     white:   '0x93a1a1'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x657b83'
+#     red:     '0xdc322f'
+#     green:   '0x859900'
+#     yellow:  '0xb58900'
+#     blue:    '0x268bd2'
+#     magenta: '0x6c71c4'
+#     cyan:    '0x2aa198'
+#     white:   '0xfdf6e3'
+
+
+
+
 
 # the color thing ends here so if you wanna paste remember not to go over this point here
 

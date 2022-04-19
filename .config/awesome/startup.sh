@@ -5,8 +5,8 @@ source /home/krishnaraj/.config/awesome/monitor_setup.sh
 flameshot &
 picom --experimental-backends &
 pulseaudio &
-brave &
-alacritty &
+# brave &
+# alacritty &
 
 # Starting Bluetooth, and autoconnecting it to my usual bluetooth headset
 sudo systemctl enable bluetooth-autoconnect
@@ -36,12 +36,12 @@ sudo chmod ugo+wx /run/media/krishnaraj/Extras
 xinput set-prop "Synaptics TM3336-001" "libinput Tapping Enabled" 1
 
 # To change the wallpaper
-feh --bg-fill --randomize ~/Pictures/Wallpapers/Nature/*
+feh --bg-scale --randomize ~/Pictures/Wallpapers/Nature/*;
 
 # Doing recurring things
 while sleep 60;
 do
 bluetooth-autoconnect &
-feh --bg-fill --randomize ~/Pictures/Wallpapers/Nature/*;
+feh --bg-scale --randomize ~/Pictures/Wallpapers/Nature/*;
 bluetoothctl connect 00:00:AB:CD:3C:8D # connecting to Airdopes
 done

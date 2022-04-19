@@ -317,11 +317,16 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, ";", function () awful.spawn.spawn("spotify") end,
     {description = "open spotify", group = "launcher"}),
     awful.key({ modkey,           },"space" ,      
-    function () awful.spawn.with_shell("sh /home/krishnaraj/.config/rofi/bin/launcher_text") end,
+    function () awful.spawn.with_shell("sh /home/krishnaraj/.config/rofi/bin/launcher_misc") end,
     {description = "open Rofi", group = "launcher"}),
     awful.key({},"#148" ,      
-    function () awful.spawn.with_shell("sh /home/krishnaraj/.config/rofi/bin/launcher_text") end,
+    function () awful.spawn.with_shell("sh /home/krishnaraj/.config/rofi/bin/launcher_misc") end,
     {description = "open Rofi", group = "launcher"}), 
+
+    awful.key({ modkey,     "Shift"},"p" ,      
+    function () awful.spawn.with_shell("sh /home/krishnaraj/.config/rofi/bin/menu_powermenu") end,
+    {description = "open Rofi", group = "launcher"}),
+
     awful.key({ }, "#180", function () awful.util.spawn("amixer set 'Master' 10%-") end,
     {description = "The Home Key on Bl Kb", group = "Controls"}),
     awful.key({ }, "#163", function () awful.util.spawn("amixer set 'Master' 10%+") end,

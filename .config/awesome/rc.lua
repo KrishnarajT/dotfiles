@@ -317,10 +317,15 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, ";", function () awful.spawn.spawn("spotify") end,
     {description = "open spotify", group = "launcher"}),
     awful.key({ modkey,           },"space" ,      
-    function () awful.spawn.with_shell("sh /home/krishnaraj/.config/rofi/bin/launcher_misc") end,
+    function () awful.spawn.with_shell("sh /home/krishnaraj/.config/rofi/bin/launcher_ribbon") end,
     {description = "open Rofi", group = "launcher"}),
+    
     awful.key({},"#148" ,      
-    function () awful.spawn.with_shell("sh /home/krishnaraj/.config/rofi/bin/launcher_misc") end,
+    function () awful.spawn.with_shell("gnome-calculator") end,
+    {description = "open Rofi", group = "launcher"}), 
+
+	awful.key({},"#133" ,      
+    function () awful.spawn.with_shell("sh /home/krishnaraj/.config/rofi/bin/launcher_ribbon") end,
     {description = "open Rofi", group = "launcher"}), 
 
     awful.key({ modkey,     "Shift"},"p" ,      

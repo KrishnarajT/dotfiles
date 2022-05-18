@@ -31,6 +31,7 @@ alias lc='colorls -lA --sd --git-status'
 
 alias download='sudo pacman -S'
 alias aur='yay -S'
+alias remove='yay -R'
 alias update-system='sudo pacman -Syyu'
 alias byefornow='shutdown now'
 alias zzz='systemctl suspend'

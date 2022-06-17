@@ -36,6 +36,7 @@ alias update-system='sudo pacman -Syyu'
 alias byefornow='shutdown now'
 alias zzz='systemctl suspend'
 alias shanti='killall -q'
+alias connectbl='sh ~/connect_bluetooth.sh'
 
 # Git Aliases
 

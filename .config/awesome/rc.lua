@@ -332,9 +332,9 @@ globalkeys = gears.table.join(
     function () awful.spawn.with_shell("sh /home/krishnaraj/.config/rofi/bin/menu_powermenu") end,
     {description = "open Rofi", group = "launcher"}),
 
-    awful.key({ }, "#180", function () awful.util.spawn("amixer set 'Master' 10%-") end,
+    awful.key({ }, "#180", function () awful.util.spawn("sh /home/krishnaraj/connect_bluetooth.sh") end,
     {description = "The Home Key on Bl Kb", group = "Controls"}),
-    awful.key({ }, "#163", function () awful.util.spawn("amixer set 'Master' 10%+") end,
+    awful.key({ "Control", }, "b", function () awful.util.spawn("sh /home/krishnaraj/connect_bluetooth.sh") end,
     {description = "The Mail Key on Bl Kb", group = "Controls"}),
     awful.key({ "Control", "Shift" }, "z", function () awful.util.spawn_with_shell("flameshot gui") end,
     {description = "Take Screenshot", group = "awesome"}),      

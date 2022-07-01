@@ -1,4 +1,20 @@
 
+echo "Folders that will be gone through are"
+
+
+echo "------------------------------------------------------------------------------------------"
+echo "1. Dotfiles"
+echo "2. Customizations and Backups"
+echo "3. Creativity and Design"
+echo "4. First Year"
+echo "5. Tuitions"
+echo "6. Documents"
+echo "7. Chats"
+echo "8. Imp Docs"
+echo "------------------------------------------------------------------------------------------"
+
+
+
 echo "Going home"
 echo
 cd $HOME
@@ -15,6 +31,9 @@ tput setaf 3; echo "pushing to dotfiles"
 echo
 push-dots
 
+
+
+
 tput setaf 5; echo "going to customizations and backups"
 echo
 cd /run/media/krishnaraj/Miscellaneous/Customization\ and\ Backups/
@@ -23,6 +42,11 @@ tput setaf 3; echo "Here is the status"
 echo
 git status
 
+tput setaf 3; echo "staging untracked files if any"
+echo
+git add -A
+
+
 tput setaf 3; echo "Commiting"
 echo
 git commit -am "daily commit"
@@ -30,6 +54,9 @@ git commit -am "daily commit"
 tput setaf 3; echo "pushing"
 echo
 git push
+
+
+
 
 
 tput setaf 5; echo "going to Creativity and Design"
@@ -40,6 +67,11 @@ tput setaf 3; echo "Here is the status"
 echo
 git status
 
+tput setaf 3; echo "staging untracked files if any"
+echo
+git add -A
+
+
 tput setaf 3; echo "Commiting"
 echo
 git commit -am "daily commit"
@@ -48,9 +80,12 @@ tput setaf 3; echo "pushing"
 echo
 git push
 
-tput setaf 5; echo "going to Second Trimester"
+
+
+
+tput setaf 5; echo "going to First Year"
 echo
-cd /run/media/krishnaraj/Classes/University/First\ Year/Second\ Trimester/
+cd /run/media/krishnaraj/Classes/University/First\ Year/
 
 tput setaf 3; echo "Here is the status"
 echo
@@ -67,6 +102,9 @@ git commit -am "daily commit"
 tput setaf 3; echo "pushing"
 echo
 git push
+
+
+
 
 tput setaf 5; echo "going to Tuitions"
 echo
@@ -87,5 +125,76 @@ git commit -am "daily commit"
 tput setaf 3; echo "pushing"
 echo
 git push
+
+
+
+
+tput setaf 5; echo "going to Documents"
+echo
+cd /run/media/krishnaraj/Miscellaneous/Office
+
+tput setaf 3; echo "Here is the status"
+echo
+git status
+
+tput setaf 3; echo "staging untracked files if any"
+echo
+git add -A
+
+tput setaf 3; echo "Commiting"
+echo
+git commit -am "daily commit"
+
+tput setaf 3; echo "pushing"
+echo
+git push
+
+
+
+
+tput setaf 5; echo "going to Chats"
+echo
+cd /run/media/krishnaraj/Miscellaneous/Phone
+
+tput setaf 3; echo "Here is the status"
+echo
+git status
+
+tput setaf 3; echo "staging untracked files if any"
+echo
+git add -A
+
+tput setaf 3; echo "Commiting"
+echo
+git commit -am "daily commit"
+
+tput setaf 3; echo "pushing"
+echo
+git push
+
+
+
+
+tput setaf 5; echo "going to Imp Docs"
+echo
+cd /run/media/krishnaraj/Miscellaneous/Imp\ Docs
+
+tput setaf 3; echo "Here is the status"
+echo
+git status
+
+tput setaf 3; echo "staging untracked files if any"
+echo
+git add -A
+
+tput setaf 3; echo "Commiting"
+echo
+git commit -am "daily commit"
+
+tput setaf 3; echo "pushing"
+echo
+git push
+
+
 
 cd $HOME

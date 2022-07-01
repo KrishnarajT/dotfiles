@@ -18,13 +18,13 @@ window:
 font:
   # Normal (roman) font face
   normal:
-    family: fantasque sans mono nerd font
+    family: sfmono
     style: regular
   bold:
-    family: fantasque sans mono nerd font
+    family: sfmono
     style: Bold
   italic:
-    family: fantasque sans mono nerd font
+    family: sfmono
     style: Italic
   size: 15
   offset:

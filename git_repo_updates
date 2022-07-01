@@ -131,7 +131,7 @@ git push
 
 tput setaf 5; echo "going to Documents"
 echo
-cd /run/media/krishnaraj/Miscellaneous/Office
+cd /run/media/krishnaraj/Miscellaneous/Documents/
 
 tput setaf 3; echo "Here is the status"
 echo

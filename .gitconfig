@@ -43,3 +43,6 @@
 	directory = /run/media/krishnaraj/Photos/Laptop/Wallpapers
 	directory = /run/media/krishnaraj/Miscellaneous/Office
 	directory = /run/media/krishnaraj/Miscellaneous/Creativity and Design
+[http]
+	version = HTTP/2
+	postBuffer = 157286400

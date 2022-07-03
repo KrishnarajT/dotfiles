@@ -11,6 +11,7 @@ echo "5. Tuitions"
 echo "6. Documents"
 echo "7. Chats"
 echo "8. Imp Docs"
+echo "9. LaTeX Files"
 echo "------------------------------------------------------------------------------------------"
 
 
@@ -178,6 +179,28 @@ git push
 tput setaf 5; echo "going to Imp Docs"
 echo
 cd /run/media/krishnaraj/Miscellaneous/Imp\ Docs
+
+tput setaf 3; echo "Here is the status"
+echo
+git status
+
+tput setaf 3; echo "staging untracked files if any"
+echo
+git add -A
+
+tput setaf 3; echo "Commiting"
+echo
+git commit -am "daily commit"
+
+tput setaf 3; echo "pushing"
+echo
+git push
+
+
+
+tput setaf 5; echo "going to LaTeX Files"
+echo
+cd /run/media/krishnaraj/Miscellaneous/Programs/LaTeX/
 
 tput setaf 3; echo "Here is the status"
 echo

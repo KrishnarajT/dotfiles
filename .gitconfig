@@ -43,6 +43,7 @@
 	directory = /run/media/krishnaraj/Photos/Laptop/Wallpapers
 	directory = /run/media/krishnaraj/Miscellaneous/Office
 	directory = /run/media/krishnaraj/Miscellaneous/Creativity and Design
+	directory = /run/media/krishnaraj/Miscellaneous/Programs/LaTeX
 [http]
 	version = HTTP/2
 	postBuffer = 157286400

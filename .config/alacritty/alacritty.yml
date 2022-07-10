@@ -18,15 +18,15 @@ window:
 font:
   # Normal (roman) font face
   normal:
-    family: sfmono
+    family: MonoLisa
     style: regular
   bold:
-    family: sfmono
+    family: MonoLisa 
     style: Bold
   italic:
-    family: sfmono
+    family: MonoLisa
     style: Italic
-  size: 15
+  size: 16
   offset:
     x: 0
     y: 0

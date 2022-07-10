@@ -1,4 +1,4 @@
--- IMPORTING 
+-- IMPORTING STUFF
 
 pcall(require, "luarocks.loader")
 -- Standard awesome library
@@ -15,15 +15,23 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local volume_control = require("volume-control")
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+
+
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
+
+
+
+
+
 
 -- ERROR HANDLING
 
 if awesome.startup_errors then
     naughty.notify({ preset = naughty.config.presets.critical,
-                     title = "Oops, there were errors during startup!",
+                     title = "BRUHH, there were errors during startup!",
                      text = awesome.startup_errors })
 end
 
@@ -41,7 +49,10 @@ do
         in_error = false
     end)
 end
--- }}}
+
+
+
+
 
 -- THEMES
 
@@ -71,17 +82,25 @@ local volume_widget = volume_control {
     end,
 }
 
+
+
+
+
+
+
+
+
 -- DEFAULTS
 
 terminal = "alacritty"
-editor = os.getenv("EDITOR") or "nano"
+editor = os.getenv("EDITOR") or "micro"
 editor_cmd = terminal .. " -e " .. editor
-modkey = "Mod1"
+modkey = "Mod1" 
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
-    -- awful.layout.suit.floating,
+    awful.layout.suit.floating,
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
@@ -98,6 +117,15 @@ awful.layout.layouts = {
     -- awful.layout.suit.corner.se,
 }
 -- }}}
+
+
+
+
+
+
+
+
+
 
 -- MENU
 
@@ -125,6 +153,19 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 -- WIBAR 
 
 -- {{{ Wibar
@@ -132,10 +173,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 mytextclock = wibox.widget.textclock()
 
 -- define your volume control, using default settings:
-volumecfg = volume_control{device="pulse"}
-
--- Create the widget
-vol_control = volumecfg.widget
+volumecfg = volume_control {device="pulse"}
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -240,10 +278,10 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
+            volumecfg.widget,
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
-            vol_control,
         },
     }
 end)

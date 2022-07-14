@@ -6,7 +6,7 @@ echo "--------------------------------------------------------------------------
 echo "1. Dotfiles"
 echo "2. Customizations and Backups"
 echo "3. Creativity and Design"
-echo "4. First Year"
+echo "4. Second Year"
 echo "5. Tuitions"
 echo "6. Documents"
 echo "7. Chats"
@@ -84,9 +84,9 @@ git push
 
 
 
-tput setaf 5; echo "going to First Year"
+tput setaf 5; echo "going to Second Year"
 echo
-cd /run/media/krishnaraj/Classes/University/First\ Year/
+cd /run/media/krishnaraj/Classes/University/Second\ Year/
 
 tput setaf 3; echo "Here is the status"
 echo

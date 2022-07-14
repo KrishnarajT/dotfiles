@@ -44,6 +44,11 @@
 	directory = /run/media/krishnaraj/Miscellaneous/Office
 	directory = /run/media/krishnaraj/Miscellaneous/Creativity and Design
 	directory = /run/media/krishnaraj/Miscellaneous/Programs/LaTeX
+	directory = /run/media/krishnaraj/Classes/University/Second Year
+	directory = /run/media/krishnaraj/Classes/University/Second-Year
+	directory = /run/media/krishnaraj/Miscellaneous/Programs/Python/SeeSur
 [http]
 	version = HTTP/2
 	postBuffer = 157286400
+[init]
+	defaultBranch = master

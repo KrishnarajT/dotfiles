@@ -68,7 +68,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("~/.config/awesome/themes/zenburn/theme.lua")
--- beautiful.init("~/.config/awesome/awesome-copycats/themes/powerarrow-dark/theme.lua")
+-- beautiful.init("/home/krishnaraj/.config/awesome/copy-cat-themes/rainbow/theme.lua")
 beautiful.font = "Ubuntu 14"
 
 
@@ -164,7 +164,7 @@ local cw = calendar_widget()
 -- or customized
 local cw = calendar_widget({
     theme = 'nord',
-    placement = 'bottom_right',
+    placement = 'top_right',
     radius = 20,
 })
 mytextclock:connect_signal("button::press", 
@@ -264,7 +264,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "bottom", screen = s, fg = beautiful.fg_normal, height = 30 })
+    s.mywibox = awful.wibar({ position = "top", screen = s, fg = beautiful.fg_normal, height = 30 })
         
 
     -- Add widgets to the wibox
@@ -280,6 +280,7 @@ awful.screen.connect_for_each_screen(function(s)
     { -- Right widgets
         layout = wibox.layout.fixed.horizontal,
         wibox.widget.systray(),
+        spacer,
         spotify_widget({
             play_icon = '/usr/share/icons/Papirus-Light/24x24/categories/spotify.svg',
             pause_icon = '/usr/share/icons/Papirus-Dark/24x24/panel/spotify-indicator.svg',
@@ -288,12 +289,14 @@ awful.screen.connect_for_each_screen(function(s)
             max_length = 15,
             show_tooltip = false,
         }),
+        spacer, 
         cpu_widget({
             width = 50,
             step_width = 2,
             step_spacing = 1,
             color = '#DA826C',
             }),
+        spacer, 
         ram_widget({
             color_used = "#F0A67F",
             color_free = "#7FF093",
@@ -301,25 +304,24 @@ awful.screen.connect_for_each_screen(function(s)
         }),
         spacer,
         volume_widget{
-        widget_type = 'icon'
+        widget_type = 'arc'
         },
         spacer,
         batteryarc_widget({
-        show_current_level = true,
-        arc_thickness = 1,
-        size = 20,
-        show_notification_mode = "on_click",
-        -- font = "Ubuntu 10",
+            show_current_level = true,
+            arc_thickness = 1,
+            size = 20,
+            show_notification_mode = "on_click",
+            -- font = "Ubuntu 10",
         }),
         spacer, 
         brightness_widget{
-        type = 'arc',
-        program = 'xbacklight',
-        step = 20,       
-        base = 80, 
+            type = 'arc',
+            program = 'xbacklight',
+            step = 20,       
+            base = 80, 
         },
         spacer,
-        -- todo_widget(), 
         weather_widget({
             api_key='a6dd979ff3bf6e3993d045bf5e0d6eb1',
             coordinates = {18.519812, 73.903431},
@@ -330,6 +332,7 @@ awful.screen.connect_for_each_screen(function(s)
             show_hourly_forecast = true,
             show_daily_forecast = true,
         }),
+        spacer,
         mytextclock,
         logout_menu_widget{
             font = 'Ubuntu 12',

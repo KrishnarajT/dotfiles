@@ -14,8 +14,17 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
-local volume_control = require("volume-control")
-local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume') -- Make sure to have alsa-utils installed.
+local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
+local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
+local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
+local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
+local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
+local run_shell = require("awesome-wm-widgets.run-shell-3.run-shell")
+local spotify_widget = require("awesome-wm-widgets.spotify-widget.spotify")
+local todo_widget = require("awesome-wm-widgets.todo-widget.todo")
+local weather_widget = require("awesome-wm-widgets.weather-widget.weather")
 
 
 -- Enable hotkeys help widget for VIM and other apps
@@ -61,29 +70,6 @@ end
 beautiful.init("~/.config/awesome/themes/zenburn/theme.lua")
 -- beautiful.init("~/.config/awesome/awesome-copycats/themes/powerarrow-dark/theme.lua")
 beautiful.font = "Ubuntu 14"
-
--- Icons for the volume control widget
-
-local function get_image(volume, state)
-    local icondir = os.getenv("HOME") .. "/.local/share/icons/"
-    if volume == 0 or state == "off"  then return icondir .. "vol_mute.png"
-    elseif volume <= 33               then return icondir .. "vol_low.png"
-    elseif volume <= 66               then return icondir .. "vol.png"
-    else                                   return icondir .. "vol.png"
-    end
-end
-
-local volume_widget = volume_control {
-    tooltip = true,
-    widget = wibox.widget.imagebox(),
-    callback = function(self, setting)
-        self.widget:set_image(
-            get_image(setting.volume, setting.state))
-    end,
-}
-
-
-
 
 
 
@@ -169,11 +155,27 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- WIBAR 
 
 -- {{{ Wibar
+
+
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 
--- define your volume control, using default settings:
-volumecfg = volume_control {device="pulse"}
+local cw = calendar_widget()
+-- or customized
+local cw = calendar_widget({
+    theme = 'nord',
+    placement = 'bottom_right',
+    radius = 20,
+})
+mytextclock:connect_signal("button::press", 
+    function(_, _, _, button)
+        if button == 1 then cw.toggle() end
+    end)
+
+-- Create a Spacer
+spacer = wibox.widget.textbox()
+spacer.text = "  "
+
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -269,19 +271,71 @@ awful.screen.connect_for_each_screen(function(s)
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
-            layout = wibox.layout.fixed.horizontal,
-            mylauncher,
-            s.mytaglist,
-            s.mypromptbox,
+        layout = wibox.layout.fixed.horizontal,
+        mylauncher,
+        s.mytaglist,
+        s.mypromptbox,
+    },
+    s.mytasklist, -- Middle widget
+    { -- Right widgets
+        layout = wibox.layout.fixed.horizontal,
+        wibox.widget.systray(),
+        spotify_widget({
+            play_icon = '/usr/share/icons/Papirus-Light/24x24/categories/spotify.svg',
+            pause_icon = '/usr/share/icons/Papirus-Dark/24x24/panel/spotify-indicator.svg',
+            dim_when_paused = true,
+            dim_opacity = 0.5,
+            max_length = 15,
+            show_tooltip = false,
+        }),
+        cpu_widget({
+            width = 50,
+            step_width = 2,
+            step_spacing = 1,
+            color = '#DA826C',
+            }),
+        ram_widget({
+            color_used = "#F0A67F",
+            color_free = "#7FF093",
+            color_buf = "#7FE8F0",
+        }),
+        spacer,
+        volume_widget{
+        widget_type = 'icon'
         },
-        s.mytasklist, -- Middle widget
-        { -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
-            volumecfg.widget,
-            wibox.widget.systray(),
-            mytextclock,
-            s.mylayoutbox,
+        spacer,
+        batteryarc_widget({
+        show_current_level = true,
+        arc_thickness = 1,
+        size = 20,
+        show_notification_mode = "on_click",
+        -- font = "Ubuntu 10",
+        }),
+        spacer, 
+        brightness_widget{
+        type = 'arc',
+        program = 'xbacklight',
+        step = 20,       
+        base = 80, 
+        },
+        spacer,
+        -- todo_widget(), 
+        weather_widget({
+            api_key='a6dd979ff3bf6e3993d045bf5e0d6eb1',
+            coordinates = {18.519812, 73.903431},
+            units = 'metric',
+            font_name = 'Carter One',
+            icons = 'VitalyGorbachev',
+            icons_extension = '.svg',
+            show_hourly_forecast = true,
+            show_daily_forecast = true,
+        }),
+        mytextclock,
+        logout_menu_widget{
+            font = 'Ubuntu 12',
+            onlock = function() awful.spawn.with_shell('logout') end
+        },
+        s.mylayoutbox,
         },
     }
 end)
@@ -428,8 +482,10 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
+    -- awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
+    --           {description = "run prompt", group = "launcher"}),
+
+    awful.key({modkey}, "r", function () run_shell.launch() end),
 
     awful.key({ modkey }, "x",
               function ()

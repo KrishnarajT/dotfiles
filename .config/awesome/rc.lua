@@ -264,7 +264,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, fg = beautiful.fg_normal, height = 30 })
+    s.mywibox = awful.wibar({ position = "bottom", screen = s, fg = beautiful.fg_normal, height = 30 })
         
 
     -- Add widgets to the wibox
@@ -281,32 +281,32 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.fixed.horizontal,
         wibox.widget.systray(),
         spacer,
-        spotify_widget({
-            play_icon = '/usr/share/icons/Papirus-Light/24x24/categories/spotify.svg',
-            pause_icon = '/usr/share/icons/Papirus-Dark/24x24/panel/spotify-indicator.svg',
-            dim_when_paused = true,
-            dim_opacity = 0.5,
-            max_length = 15,
-            show_tooltip = false,
-        }),
-        spacer, 
-        cpu_widget({
-            width = 50,
-            step_width = 2,
-            step_spacing = 1,
-            color = '#DA826C',
-            }),
-        spacer, 
-        ram_widget({
-            color_used = "#F0A67F",
-            color_free = "#7FF093",
-            color_buf = "#7FE8F0",
-        }),
-        spacer,
+        -- spotify_widget({
+            -- play_icon = '/usr/share/icons/Papirus-Light/24x24/categories/spotify.svg',
+            -- pause_icon = '/usr/share/icons/Papirus-Dark/24x24/panel/spotify-indicator.svg',
+            -- dim_when_paused = true,
+            -- dim_opacity = 0.5,
+            -- max_length = 15,
+            -- show_tooltip = false,
+        -- }),
+        -- spacer,
+        -- cpu_widget({
+            -- width = 50,
+            -- step_width = 2,
+            -- step_spacing = 1,
+            -- color = '#DA826C',
+            -- }),
+        -- spacer,
+        -- ram_widget({
+            -- color_used = "#F0A67F",
+            -- color_free = "#7FF093",
+            -- color_buf = "#7FE8F0",
+        -- }),
+        -- spacer,
         volume_widget{
         widget_type = 'arc'
         },
-        spacer,
+        -- spacer,
         batteryarc_widget({
             show_current_level = true,
             arc_thickness = 1,
@@ -314,31 +314,31 @@ awful.screen.connect_for_each_screen(function(s)
             show_notification_mode = "on_click",
             -- font = "Ubuntu 10",
         }),
-        spacer, 
-        brightness_widget{
-            type = 'arc',
-            program = 'xbacklight',
-            step = 20,       
-            base = 80, 
-        },
-        spacer,
-        weather_widget({
-            api_key='a6dd979ff3bf6e3993d045bf5e0d6eb1',
-            coordinates = {18.519812, 73.903431},
-            units = 'metric',
-            font_name = 'Carter One',
-            icons = 'VitalyGorbachev',
-            icons_extension = '.svg',
-            show_hourly_forecast = true,
-            show_daily_forecast = true,
-        }),
-        spacer,
+        -- spacer,
+        -- brightness_widget{
+            -- type = 'arc',
+            -- program = 'xbacklight',
+            -- step = 20,
+            -- base = 80,
+        -- },
+        -- spacer,
+        -- weather_widget({
+            -- api_key='a6dd979ff3bf6e3993d045bf5e0d6eb1',
+            -- coordinates = {18.519812, 73.903431},
+            -- units = 'metric',
+            -- font_name = 'Carter One',
+            -- icons = 'VitalyGorbachev',
+            -- icons_extension = '.svg',
+            -- show_hourly_forecast = true,
+            -- show_daily_forecast = true,
+        -- }),
+        -- spacer,
         mytextclock,
         logout_menu_widget{
             font = 'Ubuntu 12',
             onlock = function() awful.spawn.with_shell('logout') end
         },
-        s.mylayoutbox,
+        -- s.mylayoutbox,
         },
     }
 end)

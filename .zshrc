@@ -97,3 +97,5 @@ source $HOME/aliases
 source $HOME/shell-startup-programs
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
+# export PATH=&#34;$HOME/Android/tools:$PATH&#34;
+# export PATH=&#34;$HOME/Android/platform-tools:$PATH&#34;

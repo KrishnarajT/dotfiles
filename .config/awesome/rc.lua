@@ -289,7 +289,7 @@ awful.screen.connect_for_each_screen(function(s)
             -- max_length = 15,
             -- show_tooltip = false,
         -- }),
-        -- spacer,
+        spacer,
         -- cpu_widget({
             -- width = 50,
             -- step_width = 2,
@@ -306,7 +306,7 @@ awful.screen.connect_for_each_screen(function(s)
         volume_widget{
         widget_type = 'arc'
         },
-        -- spacer,
+        spacer,
         batteryarc_widget({
             show_current_level = true,
             arc_thickness = 1,
@@ -314,14 +314,14 @@ awful.screen.connect_for_each_screen(function(s)
             show_notification_mode = "on_click",
             -- font = "Ubuntu 10",
         }),
-        -- spacer,
-        -- brightness_widget{
-            -- type = 'arc',
-            -- program = 'xbacklight',
-            -- step = 20,
-            -- base = 80,
-        -- },
-        -- spacer,
+        spacer,
+        brightness_widget{
+            type = 'arc',
+            program = 'xbacklight',
+            step = 20,
+            base = 80,
+        },
+        spacer,
         -- weather_widget({
             -- api_key='a6dd979ff3bf6e3993d045bf5e0d6eb1',
             -- coordinates = {18.519812, 73.903431},
@@ -338,7 +338,7 @@ awful.screen.connect_for_each_screen(function(s)
             font = 'Ubuntu 12',
             onlock = function() awful.spawn.with_shell('logout') end
         },
-        -- s.mylayoutbox,
+        s.mylayoutbox,
         },
     }
 end)

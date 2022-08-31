@@ -99,3 +99,5 @@ source $HOME/shell-startup-programs
 
 # export PATH=&#34;$HOME/Android/tools:$PATH&#34;
 # export PATH=&#34;$HOME/Android/platform-tools:$PATH&#34;
+
+eval $(thefuck --alias)

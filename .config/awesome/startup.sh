@@ -26,11 +26,11 @@ sudo mkdir /run/media/krishnaraj/Windows
 sudo mkdir /run/media/krishnaraj/Photos
 sudo mkdir /run/media/krishnaraj/Miscellaneous
 sudo mkdir /run/media/krishnaraj/Classes
-sudo mount /dev/sda3 /run/media/krishnaraj/Windows
-sudo mount /dev/sda5 /run/media/krishnaraj/Extras
-sudo mount /dev/sda10 /run/media/krishnaraj/Photos
-sudo mount /dev/sda11 /run/media/krishnaraj/Miscellaneous
-sudo mount /dev/sda6 /run/media/krishnaraj/Classes
+sudo mount /dev/sdb3 /run/media/krishnaraj/Windows
+sudo mount /dev/sdb5 /run/media/krishnaraj/Extras
+sudo mount /dev/sdb10 /run/media/krishnaraj/Photos
+sudo mount /dev/sdb11 /run/media/krishnaraj/Miscellaneous
+sudo mount /dev/sdb6 /run/media/krishnaraj/Classes
 sudo chmod ugo+wx /run/media/krishnaraj/Extras
 
 xinput set-prop "Synaptics TM3336-001" "libinput Tapping Enabled" 1

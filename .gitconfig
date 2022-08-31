@@ -1,56 +1,9 @@
+[user]
+	email = krishnaraj.kpt@outlook.com
+	name = KrishnarajT
 [credential]
-	provider = generic
 	helper = 
 	helper = /usr/local/bin/git-credential-manager-core
 	credentialStore = secretservice
-[hub]
-	protocol = https~
-[user]
-	name = Krishnaraj Thadesar
-	email = krishnaraj.kpt@outlook.com
 [credential "https://dev.azure.com"]
 	useHttpPath = true
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-[safe]
-	directory = /run/media/krishnaraj/Miscellaneous/Programs/Python/Currency Converter~
-	directory = /run/media/krishnaraj/Miscellaneous/Programs/Python/Currency Converter
-	directory = /run/media/krishnaraj/
-	directory = /run/media/krishnaraj/Classes/Tuitions
-	directory = /run/media/krishnaraj
-	directory = /run/media/krishnaraj/Classes/Tuitions
-	directory = /run/media/krishnaraj/Miscellaneous/Customization and Backups
-	directory = /run/media/krishnaraj/Miscellaneous/Customization and Backups
-	directory = /run/media/krishnaraj/Miscellaneous/Customization and Backups
-	directory = /run/media/krishnaraj/Miscellaneous/Customization and Backups
-	directory = /run/media/krishnaraj/Miscellaneous/Customization and Backups
-	directory = /run/media/krishnaraj/Miscellaneous/Customization and Backups
-	directory = /run/media/krishnaraj/Miscellaneous/Customization and Backups
-	directory = /run/media/krishnaraj/Classes/University/First Year
-	directory = /run/media/krishnaraj/Classes/University/First Year
-	directory = /run/media/krishnaraj/Classes/University/Clubs/Vagapod/BoseGUI
-	directory = /run/media/krishnaraj/Classes/University/Clubs/Vagapod/BoseGUI/Vegapod-GUI
-	directory = /run/media/krishnaraj/Classes/University/Clubs/Vagapod/Vegapod-GUI
-	directory = /run/media/krishnaraj/Classes/University/Clubs/Vagapod/Vegapod-New-GUI
-	directory = /run/media/krishnaraj/Miscellaneous/Programs/Python/Chit-Chat-Charts
-	directory = /run/media/krishnaraj/Miscellaneous/Documents
-	directory = /run/media/krishnaraj/Miscellaneous/Imp Docs
-	directory = /run/media/krishnaraj/Miscellaneous/Phone
-	directory = /run/media/krishnaraj/Miscellaneous/Phone
-	directory = /run/media/krishnaraj/Photos/Laptop/Wallpapers
-	directory = /run/media/krishnaraj/Miscellaneous/Office
-	directory = /run/media/krishnaraj/Miscellaneous/Creativity and Design
-	directory = /run/media/krishnaraj/Miscellaneous/Programs/LaTeX
-	directory = /run/media/krishnaraj/Classes/University/Second Year
-	directory = /run/media/krishnaraj/Classes/University/Second-Year
-	directory = /run/media/krishnaraj/Miscellaneous/Programs/Python/SeeSur
-	directory = /run/media/krishnaraj/Miscellaneous/Programs/Java/KlikWick
-	directory = /run/media/krishnaraj/Miscellaneous/Programs/Java/Pong
-[http]
-	version = HTTP/2
-	postBuffer = 157286400
-[init]
-	defaultBranch = master

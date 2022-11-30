@@ -20,18 +20,13 @@ rfkill unblock all
 bluetoothctl power on
 
 # Making directories, and then mounting drives on them
-sudo mkdir /run/media/krishnaraj
-sudo mkdir /run/media/krishnaraj/Extras
-sudo mkdir /run/media/krishnaraj/Windows
-sudo mkdir /run/media/krishnaraj/Photos
-sudo mkdir /run/media/krishnaraj/Miscellaneous
-sudo mkdir /run/media/krishnaraj/Classes
-sudo mount /dev/sdb3 /run/media/krishnaraj/Windows
-sudo mount /dev/sdb5 /run/media/krishnaraj/Extras
-sudo mount /dev/sdb10 /run/media/krishnaraj/Photos
-sudo mount /dev/sdb11 /run/media/krishnaraj/Miscellaneous
-sudo mount /dev/sdb6 /run/media/krishnaraj/Classes
-sudo chmod ugo+wx /run/media/krishnaraj/Extras
+sudo mount --mkdir /dev/sda6 /run/media/krishnaraj/Programs
+sudo mount --mkdir /dev/sdb3 /run/media/krishnaraj/Windows
+sudo mount --mkdir /dev/sdb5 /run/media/krishnaraj/Extras
+sudo mount --mkdir /dev/sdb10 /run/media/krishnaraj/Photos
+sudo mount --mkdir /dev/sdb11 /run/media/krishnaraj/Miscellaneous
+sudo mount --mkdir /dev/sdb6 /run/media/krishnaraj/Classes
+
 
 xinput set-prop "Synaptics TM3336-001" "libinput Tapping Enabled" 1
 

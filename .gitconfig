@@ -1,6 +1,6 @@
 [user]
 	email = krishnaraj.kpt@outlook.com
-	name = KrishnarajT
+	name = Krishnaraj Thadesar
 [credential]
 	helper = 
 	helper = /usr/local/bin/git-credential-manager-core
@@ -9,3 +9,15 @@
 	useHttpPath = true
 [safe]
 	directory = *
+[http]
+	version = HTTP/2
+	postBuffer = 157286400
+[init]
+	defaultBranch = master
+[core]
+	autocrlf = input
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

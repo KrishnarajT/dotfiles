@@ -198,26 +198,5 @@ git push
 
 
 
-tput setaf 5; echo "going to LaTeX Files"
-echo
-cd /run/media/krishnaraj/Miscellaneous/Programs/LaTeX/
-
-tput setaf 3; echo "Here is the status"
-echo
-git status
-
-tput setaf 3; echo "staging untracked files if any"
-echo
-git add -A
-
-tput setaf 3; echo "Commiting"
-echo
-git commit -am "daily commit"
-
-tput setaf 3; echo "pushing"
-echo
-git push
-
-
 
 cd $HOME

@@ -28,6 +28,7 @@ tput setaf 3; echo "heres to commit"
 echo
 commit-dots
 
+
 tput setaf 3; echo "pushing to dotfiles"
 echo
 push-dots

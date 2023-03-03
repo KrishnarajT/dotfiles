@@ -3,10 +3,10 @@
 # Starting some basic utilities
 source /home/krishnaraj/.config/awesome/monitor_setup.sh
 flameshot &
-picom --experimental-backends &
+picom&
 pulseaudio &
 # brave &
-# alacritty &
+alacritty &
 
 # Starting Bluetooth, and autoconnecting it to my usual bluetooth headset
 sudo systemctl enable bluetooth-autoconnect
@@ -36,7 +36,7 @@ feh --bg-scale --randomize ~/Pictures/Wallpapers/Nature/*;
 # Doing recurring things
 while sleep 60;
 do
-bluetooth-autoconnect &
+# bluetooth-autoconnect &
 feh --bg-scale --randomize ~/Pictures/Wallpapers/Nature/*;
-bluetoothctl connect 00:00:AB:CD:3C:8D # connecting to Airdopes
+# bluetoothctl connect 00:00:AB:CD:3C:8D # connecting to Airdopes
 done

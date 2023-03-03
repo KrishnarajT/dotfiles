@@ -100,35 +100,35 @@ font:
 #     cyan: '0x95aec7'
 #     white: '0xf3f4f5'
 
-# this is ocean dark also from terminal.sexy
-
-colors:
-  # Default colors
-  primary:
-    background: '0x2b303b'
-    foreground: '0xb2c8f0'
-
-  # Normal colors
-  normal:
-    black:   '0x2b303b'
-    red:     '0xbf616a'
-    green:   '0xa3be8c'
-    yellow:  '0xebcb8b'
-    blue:    '0x8fa1b3'
-    magenta: '0xb48ead'
-    cyan:    '0x96b5b4'
-    white:   '0xc0c5ce'
-
-  # Bright colors
-  bright:
-    black:   '0x65737e'
-    red:     '0xbf616a'
-    green:   '0xa3be8c'
-    yellow:  '0xebcb8b'
-    blue:    '0x8fa1b3'
-    magenta: '0xb48ead'
-    cyan:    '0x96b5b4'
-    white:   '0xeff1f5'
+# # this is ocean dark also from terminal.sexy
+# 
+# colors:
+  # # Default colors
+  # primary:
+    # background: '0x2b303b'
+    # foreground: '0xb2c8f0'
+# 
+  # # Normal colors
+  # normal:
+    # black:   '0x2b303b'
+    # red:     '0xbf616a'
+    # green:   '0xa3be8c'
+    # yellow:  '0xebcb8b'
+    # blue:    '0x8fa1b3'
+    # magenta: '0xb48ead'
+    # cyan:    '0x96b5b4'
+    # white:   '0xc0c5ce'
+# 
+  # # Bright colors
+  # bright:
+    # black:   '0x65737e'
+    # red:     '0xbf616a'
+    # green:   '0xa3be8c'
+    # yellow:  '0xebcb8b'
+    # blue:    '0x8fa1b3'
+    # magenta: '0xb48ead'
+    # cyan:    '0x96b5b4'
+    # white:   '0xeff1f5'
 
 # Here is the paraiso scheme from terminal.sexy
 
@@ -190,8 +190,97 @@ colors:
 #     cyan:    '0x2aa198'
 #     white:   '0xfdf6e3'
 
+# another green kinda theme
+# 
+# colors:
+  # # Default colors
+  # primary:
+    # background: '0x131513'
+    # foreground: '0x8ca68c'
+# 
+  # # Normal colors
+  # normal:
+    # black:   '0x131513'
+    # red:     '0xe6193c'
+    # green:   '0x29a329'
+    # yellow:  '0xc3c322'
+    # blue:    '0x3d62f5'
+    # magenta: '0xad2bee'
+    # cyan:    '0x1999b3'
+    # white:   '0x8ca68c'
+# 
+  # # Bright colors
+  # bright:
+    # black:   '0x687d68'
+    # red:     '0xe6193c'
+    # green:   '0x29a329'
+    # yellow:  '0xc3c322'
+    # blue:    '0x3d62f5'
+    # magenta: '0xad2bee'
+    # cyan:    '0x1999b3'
+    # white:   '0xf0fff0'
+
+# another green kinda theme
+
+colors:
+  # Default colors
+  primary:
+    background: '0x1b1918'
+    foreground: '0xa8a19f'
+
+  # Normal colors
+  normal:
+    black:   '0x1b1918'
+    red:     '0xf22c40'
+    green:   '0x7bb765'
+    yellow:  '0xd5911a'
+    blue:    '0x407ee7'
+    magenta: '0x6666ea'
+    cyan:    '0x00ad9c'
+    white:   '0x78b761'
+
+  # Bright colors
+  bright:
+    black:   '0x766e6b'
+    red:     '0xf22c40'
+    green:   '0x78b761'
+    yellow:  '0xd5911a'
+    blue:    '0x407ee7'
+    magenta: '0x6666ea'
+    cyan:    '0x00ad9c'
+    white:   '0x78b761'
 
 
+# 
+# # another pink kinda theme
+# colors:
+  # # Default colors
+  # primary:
+    # background: '0x000000'
+    # foreground: '0x919191'
+# 
+  # # Normal colors
+  # normal:
+    # black:   '0x303030'
+    # red:     '0xa13a38'
+    # green:   '0x00715d'
+    # yellow:  '0x006f32'
+    # blue:    '0xa43261'
+    # magenta: '0x913e88'
+    # cyan:    '0x007086'
+    # white:   '0xc6c6c6'
+# 
+  # # Bright colors
+  # bright:
+    # black:   '0x5e5e5e'
+    # red:     '0xffa59a'
+    # green:   '0x24dfc4'
+    # yellow:  '0x73db95'
+    # blue:    '0xffbcd9'
+    # magenta: '0xffe3fc'
+    # cyan:    '0x00ddf4'
+    # white:   '0xffffff'
+    # 
 
 
 # the color thing ends here so if you wanna paste remember not to go over this point here

@@ -281,14 +281,14 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.fixed.horizontal,
         wibox.widget.systray(),
         spacer,
-        spotify_widget({
-            play_icon = '/usr/share/icons/Papirus-Light/24x24/categories/spotify.svg',
-            pause_icon = '/usr/share/icons/Papirus-Dark/24x24/panel/spotify-indicator.svg',
-            dim_when_paused = true,
-            dim_opacity = 0.5,
-            max_length = 15,
-            show_tooltip = false,
-        }),
+        -- spotify_widget({
+            -- play_icon = '/usr/share/icons/Papirus-Light/24x24/categories/spotify.svg',
+            -- pause_icon = '/usr/share/icons/Papirus-Dark/24x24/panel/spotify-indicator.svg',
+            -- dim_when_paused = true,
+            -- dim_opacity = 0.5,
+            -- max_length = 15,
+            -- show_tooltip = false,
+        -- }),
         spacer,
         -- cpu_widget({
             -- width = 50,
@@ -760,7 +760,7 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 beautiful.useless_gap = 5
--- awful.util.spawn_with_shell("sh ~/.config/awesome/startup.sh")
+awful.util.spawn_with_shell("sh ~/.config/awesome/startup.sh")
 
 
 -- closing other running scripts, before restarting awesome or a new startup.sh process

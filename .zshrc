@@ -4,6 +4,7 @@
 # Paths addition
 export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
+export PATH="/usr/bin/latex:/usr/bin/pdflatex:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

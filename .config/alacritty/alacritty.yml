@@ -18,13 +18,13 @@ window:
 font:
   # Normal (roman) font face
   normal:
-    family: MonoLisa
-    style: regular
+    family: Jetbrains Mono
+    style: Regular
   bold:
-    family: MonoLisa 
+    family: Jetbrains Mono
     style: Bold
   italic:
-    family: MonoLisa
+    family: Jetbrains Mono
     style: Italic
   size: 16
   offset:

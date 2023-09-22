@@ -20,6 +20,7 @@ alias weather='clear && curl wttr.in'
 alias tty='tty-clock -C6 -c -t'
 alias zshrc="code ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+alias ding='node ~/scrap_image.js'
 
 # Shell Aliases
 

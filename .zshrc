@@ -101,3 +101,10 @@ source $HOME/shell-startup-programs
 
 eval $(thefuck --alias)
 export EDITOR='micro'
+
+# bun completions
+[ -s "/home/krishnaraj/.bun/_bun" ] && source "/home/krishnaraj/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -1,0 +1,28 @@
+<background>
+  <starttime>
+    <year>2022</year>
+    <month>10</month>
+    <day>14</day>
+    <hour>04</hour>
+    <minute>52</minute>
+    <second>22</second>
+  </starttime>
+<static>
+    <duration>3595.0</duration>
+    <file>/home/krishnaraj/Pictures/Wallpapers/QuoteFancy Perseverence/941-Abraham-Lincoln-Quote-I-am-a-slow-walker-but-I-never-walk-back.jpg</file>
+  </static>
+  <transition type="overlay"> 
+    <duration>5.0</duration>
+    <from>/home/krishnaraj/Pictures/Wallpapers/QuoteFancy Perseverence/941-Abraham-Lincoln-Quote-I-am-a-slow-walker-but-I-never-walk-back.jpg</from>
+<to>/home/krishnaraj/Pictures/Wallpapers/QuoteFancy Perseverence/489-Winston-Churchill-Quote-If-you-are-going-through-hell-keep-going.jpg</to>
+  </transition>
+  <static>
+    <duration>3595.0</duration>
+    <file>/home/krishnaraj/Pictures/Wallpapers/QuoteFancy Perseverence/489-Winston-Churchill-Quote-If-you-are-going-through-hell-keep-going.jpg</file>
+  </static>
+  <transition type="overlay">
+    <duration>5.0</duration>
+    <from>/home/krishnaraj/Pictures/Wallpapers/QuoteFancy Perseverence/489-Winston-Churchill-Quote-If-you-are-going-through-hell-keep-going.jpg</from>
+<to>/home/krishnaraj/Pictures/Wallpapers/QuoteFancy Perseverence/941-Abraham-Lincoln-Quote-I-am-a-slow-walker-but-I-never-walk-back.jpg</to>
+  </transition>
+</background>

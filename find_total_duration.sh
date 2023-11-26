@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the folder path
-folder_path="/run/media/krishnaraj/VBoxes/Courses/[1] Statistics and Probability for Data Science/Statistics and Probability for Data Science"
+folder_path="/run/media/krishnaraj/Extras/Shows/GetFreeCourses.Co-Udemy-Complete FastAPI masterclass from scratch"
 
 # Initialize total duration variable
 total_duration=0

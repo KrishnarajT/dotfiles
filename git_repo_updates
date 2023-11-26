@@ -22,16 +22,16 @@ cd $HOME
 
 tput setaf 5; echo "starting with dotfiles, here is the status"
 echo
-dot status
+git status
 
 tput setaf 3; echo "heres to commit"
 echo
-commit-dots
+git commit -am "usual commit"
 
 
 tput setaf 3; echo "pushing to dotfiles"
 echo
-push-dots
+git push
 
 
 
@@ -197,6 +197,28 @@ tput setaf 3; echo "pushing"
 echo
 git push
 
+
+
+
+tput setaf 5; echo "going to Latex"
+echo
+cd /run/media/krishnaraj/Programs/LaTeX
+
+tput setaf 3; echo "Here is the status"
+echo
+git status
+
+tput setaf 3; echo "staging untracked files if any"
+echo
+git add -A
+
+tput setaf 3; echo "Commiting"
+echo
+git commit -am "daily commit"
+
+tput setaf 3; echo "pushing"
+echo
+git push
 
 
 

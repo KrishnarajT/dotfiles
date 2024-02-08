@@ -17,17 +17,16 @@
 
 
 # unmounting stuff if its mounted first. 
-sudo umount /run/media/krishnaraj/Classes /run/media/krishnaraj/Courses /run/media/krishnaraj/Extras /run/media/krishnaraj/Miscellaneous /run/media/krishnaraj/Photos /run/media/krishnaraj/Programs /run/media/krishnaraj/VBoxes /run/media/krishnaraj/Windows
+sudo umount /run/media/krishnaraj/Classes /run/media/krishnaraj/Extras /run/media/krishnaraj/Miscellaneous /run/media/krishnaraj/Programs /run/media/krishnaraj/Windows /run/media/krishnaraj/Free
 
 # Making directories, and then mounting drives on them
 sudo mount --mkdir /dev/sda6 /run/media/krishnaraj/Programs
 sudo mount --mkdir /dev/sda3 /run/media/krishnaraj/Windows
-sudo mount --mkdir /dev/sdb5 /run/media/krishnaraj/Extras
-sudo mount --mkdir /dev/sdb10 /run/media/krishnaraj/Photos
+sudo mount --mkdir /dev/sda9 /run/media/krishnaraj/Extras
+sudo mount --mkdir /dev/sda8 /run/media/krishnaraj/Classes
 sudo mount --mkdir /dev/sdb11 /run/media/krishnaraj/Miscellaneous
-sudo mount --mkdir /dev/sdb6 /run/media/krishnaraj/Classes
-sudo mount --mkdir /dev/sdb1 /run/media/krishnaraj/Courses
-sudo mount --mkdir /dev/sdb2 /run/media/krishnaraj/VBoxes
+sudo mount --mkdir /dev/sdb1 /run/media/krishnaraj/Free
+
 
 
 
